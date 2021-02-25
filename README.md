@@ -11,11 +11,12 @@
 
 POST http://localhost:8080/api/login
 
+```json
 {
     "username": "client",
     "password": "client"
 }
-
+```
 
 **Swagger endpoint (not secured)**
 
