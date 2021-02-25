@@ -33,4 +33,6 @@ GET http://localhost:8080/swagger/endpoint
 ```cmd
 ./gradlew app:check
 ```
-
+```diff
+Reports are stored at /app/build/reports
+```
