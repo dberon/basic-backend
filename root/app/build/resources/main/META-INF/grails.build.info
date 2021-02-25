@@ -1,0 +1,6 @@
+#Thu, 25 Feb 2021 14:51:14 -0300
+
+info.app.version=0.1
+info.app.name=app
+grails.env=development
+info.app.grailsVersion=4.0.4

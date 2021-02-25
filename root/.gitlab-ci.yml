@@ -1,0 +1,61 @@
+stages:
+  - build
+#  - approve
+  - deploy
+
+before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+
+cache:
+  paths:
+     - .gradle/wrapper
+     - .gradle/caches
+
+build-prod:
+  stage: build
+  only:
+    - master
+    - tags
+  tags:
+    - openjdk-11-jdk
+
+  artifacts:
+    when: on_success
+    paths:
+      - app/build/reports/clover
+      - app/build/reports/tests
+      - app/build/reports/codenarc
+  script:
+    - chmod +x ./gradlew
+    - ./gradlew cloverGenerateReport --rerun-tasks
+    - ./gradlew app:check
+    
+#approve:
+#  stage: approve
+#  script:
+#    - echo Hello!
+#  environment:
+#    name: production
+#    url: https://example.com
+#  when: manual
+#  allow_failure: false 
+#  only:
+#    - master
+
+deploy:
+  stage: deploy
+  tags:
+    - openjdk-11-jdk
+  artifacts:
+    when: on_success
+    paths:
+      - app/build/libs/*.war
+  script:
+    - chmod +x ./gradlew
+    - ./gradlew bootWar
+    - curl --upload-file app/build/libs/deploy.war "http://192.168.1.22:8080/manager/text/deploy?path=/my-app&update=true" --user tomcat:tomcat
+  when: manual
+  allow_failure: false 
+  only:
+    - master
+    - tags

@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.bmuschko:gradle-clover-plugin:3.0.1'
+    }
+}
+
+
+apply plugin: 'com.bmuschko.clover'
+
+dependencies {
+    clover 'org.openclover:clover:4.4.1'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+clover {
+
+    compiler {
+        //Fix: forces clover to compile with JDK 8
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+        //Fix: @GrailsCompileStatics error issue https://github.com/bmuschko/gradle-clover-plugin/issues/127
+        //using https://github.com/bmuschko/gradle-clover-plugin/blob/master/README.md
+        additionalGroovycOpts = [configscript: project.file('cloverFix.groovy').absolutePath]
+    }
+
+    licenseLocation = File.createTempFile('clover', '.license').absolutePath
+
+    excludes = ['**/Application.groovy',
+                '**/BootStrap.groovy',
+                '**/UrlMappings.groovy',
+                '**/*GrailsPlugin.groovy',
+                '**/*Mock.groovy',
+    ]
+
+    testIncludes = ['**/*Spec.groovy']
+    report {
+        html = true
+        xml = true
+    }
+
+
+}

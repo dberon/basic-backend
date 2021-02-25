@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.codenarc.rule.grails.GrailsTransactionalRuleTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-02-25T17:31:18" hostname="diego-pc" time="0.483">
+  <properties/>
+  <testcase name="testGrailsTransactionalIsAllowedOnMethodWithFullpackageAnnotation" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.411"/>
+  <testcase name="testSpringTransactionalIsNotAllowedOnClassWithImport" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.017"/>
+  <testcase name="testGrailsTransactionalIsAllowedOnClassWithImport" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.003"/>
+  <testcase name="testGrailsTransactionalIsAllowedOnMethodWithImport" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.003"/>
+  <testcase name="testSpringTransactionalIsNotAllowedOnClassWithFullpackageAnnotation" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.004"/>
+  <testcase name="testSpringTransactionalIsNotAllowedOnMethodWithImport" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.005"/>
+  <testcase name="testSpringTransactionalIsNotAllowedOnMethodWithFullpackageAnnotation" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.005"/>
+  <testcase name="testGrailsTransactionalIsAllowedOnClassWithFullpackageAnnotation" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.004"/>
+  <testcase name="testThatInvalidCodeHasNoViolations" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.017"/>
+  <testcase name="testThatUnrelatedCodeHasNoViolations" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.005"/>
+  <testcase name="testThatApplyToFilesMatchingValuesAreValidRegex" classname="org.codenarc.rule.grails.GrailsTransactionalRuleTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>

@@ -1,0 +1,6 @@
+app.$VehicleDataServiceImplementation
+app.$IVehicleDataServiceImplementation
+app.$VehicleServiceImplementation
+app.tracking_core.vehicle.$VehicleDataServiceImplementation
+app.tracking_core.vehicle.$VehicleServiceImplementation
+app.$FleetServiceImplementation
