@@ -6,6 +6,7 @@
 - openclover 
 - gorm database migration 
 - swagger
+- spring security rest
 
 **Login example**
 
