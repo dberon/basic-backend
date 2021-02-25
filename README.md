@@ -1,5 +1,12 @@
 # basic-backend
 
+**Contains:**
+
+- codenarcs 
+- openclover 
+- gorm database migration 
+- swagger
+
 **Login example**
 
 POST http://localhost:8080/api/login
@@ -8,6 +15,11 @@ POST http://localhost:8080/api/login
     "username": "client",
     "password": "client"
 }
+
+
+**Swagger endpoint (not secured)**
+
+GET http://localhost:8080/swagger/endpoint
 
 **Openclover command**
 
