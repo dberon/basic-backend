@@ -24,8 +24,13 @@ GET http://localhost:8080/swagger/endpoint
 
 **Openclover command**
 
+```cmd
 ./gradlew cloverGenerateReport --rerun-tasks
+```
 
 **Codenarcs command**
 
+```cmd
 ./gradlew app:check
+```
+
